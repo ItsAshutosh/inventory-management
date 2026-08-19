@@ -33,6 +33,8 @@ public class SecurityConfig {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(
                                 "/",
+                                "/health",
+                                "/api/health",
                                 "/auth/register",
                                 "/auth/login",
                                 "/swagger-ui/**",

@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController
 public class RootController {
 
-    @GetMapping("/")
+    @GetMapping({"/", "/health", "/api/health"})
     public ResponseEntity<Map<String, Object>> root() {
         Map<String, Object> response = new LinkedHashMap<>();
         response.put("name", "Inventory Management REST API");
